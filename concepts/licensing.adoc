@@ -1,0 +1,42 @@
+---
+sidebar: sidebar 
+permalink: concepts/licensing.html 
+keywords: license, licensing 
+summary: 瞭解Astra Control Center可執行的行動、會因授權狀態而異、以及Astra Control Center的使用如何影響授權使用量。 
+---
+= 授權
+:hardbreaks:
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/concepts/
+
+
+[role="lead"]
+Astra Control Center需要安裝授權、才能啟用完整的應用程式資料管理功能。當您部署Astra Control Center時、若無授權、Web UI會顯示橫幅、警告系統功能有限。
+
+您可以使用下列其中一種方式取得授權：
+
+* link:https://mysupport.netapp.com/site/downloads/evaluation/astra-control-center["如果您正在評估Astra Control Center、請下載試用版授權檔案"^]。評估授權可讓您從下載授權之日起90天內使用Astra Control Center。
+* link:https://mysupport.netapp.com/site/["如果您已購買Astra Control Center、請產生您的NetApp授權檔案（NLF）"^] 來自整個NetApp 支援網站購買產品後、您會收到序號和授權、並可在支援網站上使用。
+
+
+如需ONTAP 有關支援不支援的詳細資訊、請參閱 link:../get-started/requirements.html["支援的儲存後端"]。
+
+
+NOTE: 您可以新增叢集、新增儲存庫、以及管理儲存後端、而無需授權。
+
+
+
+== 如何計算授權使用量
+
+當您將新叢集新增至Astra Control Center時、除非至少有一個執行於叢集上的應用程式由Astra Control Center管理、否則它不會將使用的授權列入計算。
+
+當您開始管理叢集上的應用程式時、該叢集的所有CPU單元都會包含在Astra Control Center授權使用量中。
+
+
+
+== 如需詳細資訊、請參閱
+
+* link:../get-started/setup_overview.html#add-a-license-for-astra-control-center["第一次設定Astra Control Center時、請新增授權"]
+* link:../use/update-licenses.html["更新現有授權"]
+

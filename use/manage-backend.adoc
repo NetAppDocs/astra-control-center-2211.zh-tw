@@ -1,0 +1,120 @@
+---
+sidebar: sidebar 
+permalink: use/manage-backend.html 
+keywords: how to use astra control, what is astra storage, how to set up astra storage backend, ontap storage in astra, backend storage in astra 
+summary: 為內部部署的Kubernetes應用程式新增儲存設備。Astra Control會探索並使用已部署的資源、包括Trident、ONTAP 支援、及相關的儲存類別。 
+---
+= 管理儲存後端
+:hardbreaks:
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/use/
+
+
+[role="lead"]
+將Astra Control中的儲存叢集管理為儲存後端、可讓您在持續磁碟區（PV）與儲存後端之間建立連結、以及取得額外的儲存指標。如果Astra Control Center連接Cloud Insights 到VMware、您可以監控儲存容量和健全狀況詳細資料、包括效能。
+
+如需如何使用Astra Control API管理儲存後端的指示、請參閱 link:https://docs.netapp.com/us-en/astra-automation/["Astra Automation和API資訊"^]。
+
+您可以完成下列與管理儲存後端相關的工作：
+
+* link:../get-started/setup_overview.html#add-a-storage-backend["新增儲存後端"]
+* <<檢視儲存後端詳細資料>>
+* <<取消管理儲存後端>>
+* <<移除儲存後端>>
+
+
+
+
+== 檢視儲存後端詳細資料
+
+您可以從儀表板或後端選項檢視儲存後端資訊。
+
+
+
+=== 從儀表板檢視儲存後端詳細資料
+
+.步驟
+. 從左側導覽中選取*儀表板*。
+. 檢閱儀表板的儲存後端面板、其中會顯示狀態：
++
+** *不健全*：儲存設備未處於最佳狀態。這可能是因為延遲問題、或是應用程式因為容器問題而降級。
+** *一切正常*：儲存設備已經過管理、並處於最佳狀態。
+** *探索*：儲存設備已被探索、但未由Astra Control管理。
+
+
+
+
+
+
+=== 從後端選項檢視儲存後端詳細資料
+
+檢視後端健全狀況、容量和效能（IOPS處理量和/或延遲）的相關資訊。
+
+您可以看到Kubernetes應用程式所使用的磁碟區、這些磁碟區儲存在選定的儲存後端。有了此功能、您可以查看更多資訊。Cloud Insights請參閱 https://docs.netapp.com/us-en/cloudinsights/["本文檔 Cloud Insights"]。
+
+.步驟
+. 在左側導覽區域中、選取*後端*。
+. 選取儲存後端。
++
+
+TIP: 如果您連線至NetApp Cloud Insights 解決方案、Cloud Insights 則會在「後端」頁面上顯示來自於《》的資料摘錄。
+
++
+image:../use/acc_backends_ci_connection2.png["後端頁面的快照"]
+
+. 若要直接移至Cloud Insights 「不顯示」、請選取Cloud Insights 「指標」影像旁的*「不顯示」圖示。
+
+
+
+
+== 取消管理儲存後端
+
+您可以取消管理後端。
+
+.步驟
+. 從左側導覽中選取*後端*。
+. 選取儲存後端。
+. 從「*動作*」欄的「選項」功能表中、選取「*取消管理*」。
+. 輸入「unManage（取消管理）」以確認此動作。
+. 選擇*是、取消管理儲存後端*。
+
+
+
+
+== 移除儲存後端
+
+您可以移除不再使用的儲存後端。您可能會想要這麼做、讓您的組態保持簡單且最新狀態。
+
+.您需要的產品
+* 確保儲存後端未受管理。
+* 確保儲存後端沒有任何與叢集相關的磁碟區。
+
+
+.步驟
+. 從左側導覽中選取*後端*。
+. 如果管理後端、請取消管理。
++
+.. 選擇*託管*。
+.. 選取儲存後端。
+.. 從*「Actions」（動作）*選項中、選取*「UnManage」（取消管理）*。
+.. 輸入「unManage（取消管理）」以確認此動作。
+.. 選擇*是、取消管理儲存後端*。
+
+
+. 選擇*已探索*。
++
+.. 選取儲存後端。
+.. 從* Actions *（操作*）選項中選擇*移除*。
+.. 輸入「移除」以確認動作。
+.. 選擇*是、移除儲存後端*。
+
+
+
+
+
+
+== 如需詳細資訊、請參閱
+
+* https://docs.netapp.com/us-en/astra-automation/index.html["使用Astra Control API"^]
+
