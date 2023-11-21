@@ -1,0 +1,8 @@
+---
+permalink: get-started/intro.html 
+redirect: astra-control-center-2211/index.html 
+---
+= 
+:allow-uri-read: 
+
+

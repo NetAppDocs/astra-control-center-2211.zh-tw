@@ -1,0 +1,8 @@
+---
+permalink: get-started/configure-after-install.html 
+redirect: astra-control-center-2211/index.html 
+---
+= 
+:allow-uri-read: 
+
+

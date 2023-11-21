@@ -1,0 +1,8 @@
+---
+permalink: concepts/understand-pod-security.html 
+redirect: astra-control-center-2211/index.html 
+---
+= 
+:allow-uri-read: 
+
+
